@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "b7c285e8-f2c4-41b9-88dc-526c22963b16",
+		"name": "SalesGPT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "22913389"
+	},
+	"item": [
+		{
+			"name": "Chat Agent",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"human_say\": \"my pain always pain, so I cannot sleep well\",\n    \"conversation_history\": [\n        \"Ted Lasso: Hey, good morning! How are you? <END_OF_TURN>\",\n        \"User: hi, how are you? why calling? <END_OF_TURN>\",\n        \"Ted Lasso: Hi there! I'm Ted Lasso from Sleep Haven. I'm calling to see if you're looking to achieve better sleep by purchasing a premium mattress. How have you been sleeping lately? <END_OF_TURN>\"\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/chat",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"chat"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "SERVER_ENDPOINT",
+			"value": "http://127.0.0.1:8000",
+			"type": "string"
+		}
+	]
+}
